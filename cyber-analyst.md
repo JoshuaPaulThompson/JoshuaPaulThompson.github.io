@@ -1,43 +1,57 @@
-# 🛡️ ENTER YOUR FULL NAME
-## 👩‍💻 CYBERSECURITY ANALYST | Threat Detection | Incident Response | Network Defense
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/<yourlinkedin>)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/<yourgithub>)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Profile-red)](https://tryhackme.com/p/<yourtryhackme>)
-[![HackTheBox](https://img.shields.io/badge/HackTheBox-Profile-green)](https://hackthebox.com/home/users/profile/<yourid>)
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-orange)](mailto:<youremail>@gmail.com)
+# 🛡️ Joshua Paul Thompson
+## 👩‍💻 Cybersecurity & Digital Forensics Professional | Threat Detection | Incident Response | Network Defense | Digital Foresnics
+### "Transforming 15+ years of troubleshooting experience into cybersecurity expertise."
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/joshuapthompson/)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/JoshuaPaulThompson)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-Profile-red)](https://tryhackme.com/p/jpthompson264)
+[![HackTheBox](https://img.shields.io/badge/HackTheBox-Profile-green)](https://profile.hackthebox.com/profile/019eb343-d16b-72b7-9054-54bfa65b6443)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-orange)](mailto:jpthompson264@gmail.com)
 
 ---
 
 ## 👋 About Me  
 
-I’m a **Cybersecurity Analyst** passionate about **protecting systems, investigating threats, and responding to incidents** in real and simulated environments.  
-
-With hands-on experience in **SIEM monitoring, intrusion detection, and vulnerability assessment**, I specialize in analyzing log data, correlating alerts, and identifying suspicious activities across hybrid infrastructures.  
-
-I enjoy turning raw data into actionable security insights and continuously learning new tools, frameworks, and methodologies to stay ahead of modern cyber threats.  
-
-My goal is to **strengthen organizational resilience** through proactive monitoring, automation, and a well-documented incident response process.  
+I recently completed my Information Technology degree with a concentration in Cybersecurity and Digital Forensics from Kent State University. After spending more than fifteen years diagnosing and repairing mechanical systems, I transitioned into technology and cybersecurity. My experience solving complex problems, combined with my academic background and cybersecurity training, has prepared me to contribute to security operations, digital investigations, and incident response teams.
 
 ---
 
 ## 🤯 Technical Skills  
 
-[![My Skills](https://skillicons.dev/icons?i=linux,windows,bash,powershell,python,aws,azure,git,github,html,css,vscode,docker)](https://skillicons.dev)
+## Security
+Vulnerability Assessment
+Risk Analysis
+Incident Response
+Threat Hunting
+Digital Forensics
 
-**Core Competencies**  
-- Security Operations & Threat Analysis  
-- Incident Response (IR) & Digital Forensics  
-- SIEM Configuration & Log Correlation (Splunk / Wazuh / ELK)  
-- Network Traffic Monitoring & IDS/IPS (Suricata / Snort)  
-- Endpoint Detection & Response (EDR)  
-- Vulnerability Management & Remediation  
-- Scripting (Python / PowerShell / Bash)  
-- Cloud Security Monitoring (AWS GuardDuty / Security Hub)  
+## Networking
+TCP/IP
+DNS
+DHCP
+Routing
+Switching
 
-**Certifications**  
-![CompTIA Security+](https://img.shields.io/badge/CompTIA-Security+-red) ![Network+](https://img.shields.io/badge/CompTIA-Network+-orange) ![A+](https://img.shields.io/badge/CompTIA-A+-blue) ![AWS Cloud Practitioner](https://img.shields.io/badge/AWS-Cloud_Practitioner-black) ![CCNA](https://img.shields.io/badge/Cisco-CCNA-blue)
+## Tools
+Wireshark
+Nmap
+Autopsy
+FTK Imager
+Splunk
+Nessus
 
+## Operating Systems
+Windows
+Windows Server
+Linux
+Kali Linux
+
+## Programming
+Python
+PowerShell
+SQL
+C#
+Java
+Visual Basic
 ---
 
 ## 🎯 Featured Projects  
