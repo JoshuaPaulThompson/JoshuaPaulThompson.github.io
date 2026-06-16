@@ -51,10 +51,56 @@
       z-index: 9999;
     }
 
+    /* ── SEEKING BANNER ── */
+    .seeking-banner {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(0,229,255,0.08);
+      border-bottom: 1px solid rgba(0,229,255,0.25);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      padding: 9px 16px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--signal);
+      text-transform: uppercase;
+    }
+    .seeking-banner span { color: var(--dim); margin: 0 10px; }
+
+    /* ── PHOTO ── */
+    .hero-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 2px solid var(--signal);
+      box-shadow: 0 0 24px rgba(0,229,255,0.18);
+      object-fit: cover;
+      margin-bottom: 28px;
+      display: block;
+    }
+    .hero-photo-placeholder {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 2px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      color: var(--dim);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 12px;
+    }
+
     /* ── NAV ── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 38px; left: 0; right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
@@ -615,14 +661,100 @@
       animation: ping 2s cubic-bezier(0,0,0.2,1) infinite;
     }
 
+    /* ── HAMBURGER BUTTON ── */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 201;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--signal);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE MENU DRAWER ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(5,10,15,0.97);
+      z-index: 150;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--signal); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
+      /* Banner */
+      .seeking-banner { font-size: 9px; letter-spacing: 0.1em; padding: 8px 12px; }
+
+      /* Nav */
+      nav { padding: 14px 20px; top: 34px; }
       .nav-links { display: none; }
-      section, #hero { padding-left: 24px; padding-right: 24px; }
-      .project-item { grid-template-columns: 1fr; gap: 12px; }
+      .nav-toggle { display: flex; }
+
+      /* Hero */
+      #hero { padding: 140px 24px 60px; }
+      .hero-name { font-size: clamp(42px, 12vw, 64px); }
+      .hero-bio { font-size: 14px; }
+      .hero-photo-placeholder { width: 100px; height: 100px; font-size: 9px; }
+      .hero-photo { width: 100px; height: 100px; }
+      .status-bar { gap: 28px; margin-top: 48px; }
+      .stat-value { font-size: 28px; }
+
+      /* Sections */
+      section { padding: 64px 24px; }
+
+      /* Skills */
+      .skills-grid { grid-template-columns: 1fr; }
+
+      /* Projects */
+      .project-item { grid-template-columns: 1fr; gap: 10px; }
       .project-num { display: none; }
-      footer { flex-direction: column; gap: 8px; text-align: center; }
+      .project-link { display: inline-block; margin-top: 8px; }
+
+      /* Certs */
+      .certs-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+      /* Timeline */
+      .timeline { padding-left: 20px; }
+
+      /* Contact */
+      .contact-links { gap: 12px; }
+      .contact-link { font-size: 10px; padding: 10px 16px; }
+
+      /* Footer */
+      footer { flex-direction: column; gap: 10px; text-align: center; padding: 20px 24px; }
+    }
+
+    @media (max-width: 400px) {
+      .certs-grid { grid-template-columns: 1fr; }
+      .hero-cta { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -632,6 +764,20 @@
   </style>
 </head>
 <body>
+
+  <!-- SEEKING BANNER -->
+  <div class="seeking-banner">
+    🟢 Actively Seeking <span>·</span> SOC Analyst &nbsp;|&nbsp; Junior Forensics Investigator &nbsp;|&nbsp; Incident Response <span>·</span> Northeast Ohio &amp; Remote
+  </div>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#certs" onclick="closeMenu()">Certs</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
 
   <!-- NAV -->
   <nav>
@@ -643,6 +789,9 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -650,10 +799,14 @@
     <div class="hero-eyebrow">
       <span class="live-dot">Open to opportunities</span>
     </div>
+
+    <!-- Headshot -->
+    <img src="headshot.png" alt="Joshua Thompson" class="hero-photo" />
+
     <h1 class="hero-name">
       Joshua<br>Thompson<span class="accent">.</span>
     </h1>
-    <p class="hero-role">Cybersecurity Analyst &amp; Digital Forensics Investigator<span class="cursor"></span></p>
+    <p class="hero-role" id="typing-role"></p>
     <p class="hero-bio">
       B.S. Information Technology graduate from Kent State University with a 3.89 GPA and a concentration in Cybersecurity &amp; Forensics. I bring hands-on lab experience in incident response, vulnerability analysis, and defensive security — backed by strong operational leadership and an eye for detail honed across years of managing complex, high-accountability environments.
     </p>
@@ -901,12 +1054,12 @@
       <a href="https://github.com/JoshuaPaulThompson" target="_blank" rel="noopener" class="contact-link">GitHub</a>
       <a href="https://profile.hackthebox.com/profile/019eb343-d16b-72b7-9054-54bfa65b6443" target="_blank" rel="noopener" class="contact-link">HackTheBox</a>
       <a href="https://tryhackme.com/p/jpthompson264" target="_blank" rel="noopener" class="contact-link">TryHackMe</a>
-      <a href="Joshua Thompson Resume 2026.pdf" download class="contact-link">Download CV</a>
+      <a href="https://joshuapaulthompson.github.io/Joshua_Thompson_Resume_2026.pdf" target="_blank" rel="noopener" class="contact-link">Download CV</a>
     </div>
   </section>
 
   <!-- FOOTER -->
- <footer>
+  <footer>
     <span class="footer-copy">© 2026 Joshua Thompson — All rights reserved</span>
     <span class="footer-visitors">
       <img 
@@ -916,7 +1069,55 @@
       />
     </span>
     <span class="footer-sig">Built with intention. Secured by design.</span>
-</footer>
+  </footer>
 
+  <script>
+    // Hamburger menu
+    const toggle = document.getElementById('navToggle');
+    const menu   = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    });
+    function closeMenu() {
+      toggle.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Typing animation for hero role
+    const roles = [
+      "Cybersecurity Analyst",
+      "Digital Forensics Investigator",
+      "Incident Responder",
+      "SOC Analyst"
+    ];
+    const el = document.getElementById('typing-role');
+    let roleIndex = 0, charIndex = 0, deleting = false;
+
+    function type() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        el.innerHTML = current.slice(0, charIndex++) + '<span class="cursor"></span>';
+        if (charIndex > current.length) {
+          deleting = true;
+          setTimeout(type, 1800);
+          return;
+        }
+      } else {
+        el.innerHTML = current.slice(0, charIndex--) + '<span class="cursor"></span>';
+        if (charIndex < 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          charIndex = 0;
+          setTimeout(type, 400);
+          return;
+        }
+      }
+      setTimeout(type, deleting ? 40 : 65);
+    }
+    type();
+  </script>
 </body>
 </html>
